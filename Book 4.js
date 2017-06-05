@@ -21,3 +21,14 @@ typeof a; // "number"
 
 // an IIFE ("Immediately Invoked Function Expressions")
 --------------------------------------------------------------------------
+
+//We need to be careful when declaring empty arrays.
+var a = [ ];
+
+a[0] = 1;
+// no `a[1]` slot set here
+a[2] = [ 3 ];
+
+a[1];		// undefined
+
+a.length;	// 3
