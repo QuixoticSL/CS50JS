@@ -32,3 +32,13 @@ a[2] = [ 3 ];
 a[1];		// undefined
 
 a.length;	// 3
+
+//When adding string values to arrays you don't contribute to the lenght
+var a = [ ];
+
+a[0] = 1;
+a["foobar"] = 2;
+
+a.length;		// 1
+a["foobar"];	// 2
+a.foobar;		// 2
