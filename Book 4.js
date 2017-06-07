@@ -42,3 +42,14 @@ a["foobar"] = 2;
 a.length;		// 1
 a["foobar"];	// 2
 a.foobar;		// 2
+
+// Very large or very small numbers get outputted in exponent form
+var a = 5E10;
+a;					// 50000000000
+a.toExponential();	// "5e+10"
+
+var b = a * a;
+b;					// 2.5e+21
+
+var c = 1 / a;
+c;					// 2e-11
