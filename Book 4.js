@@ -53,3 +53,12 @@ b;					// 2.5e+21
 
 var c = 1 / a;
 c;					// 2e-11
+
+//Whats created can be different than contructed.
+var a = new String( "abc" );
+
+typeof a; // "object" ... not "String"
+
+a instanceof String; // true
+
+Object.prototype.toString.call( a ); // "[object String]"
