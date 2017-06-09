@@ -62,3 +62,6 @@ typeof a; // "object" ... not "String"
 a instanceof String; // true
 
 Object.prototype.toString.call( a ); // "[object String]"
+
+//"type casting" (or "type conversion")
+//occur in statically typed languages at compile time, while "type coercion" is a runtime conversion for dynamically typed languages.
