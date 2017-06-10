@@ -90,3 +90,13 @@ a.toJSON = function() {
 };
 
 JSON.stringify( a ); // "{"b":42}"
+
+//Explicit coercion
+var a = 42;
+var b = String( a );
+
+var c = "3.14";
+var d = Number( c );
+
+b; // "42"
+d; // 3.14
