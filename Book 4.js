@@ -68,3 +68,25 @@ Object.prototype.toString.call( a ); // "[object String]"
 
 //If you intend to JSON stringify an object that may contain illegal JSON value(s), or if you just have values in the object
 //that aren't appropriate for the serialization, you should define a toJSON() method for it that returns a JSON-safe version of the object.
+
+var o = { };
+
+var a = {
+	b: 42,
+	c: o,
+	d: function(){}
+};
+
+// create a circular reference inside `a`
+o.e = a;
+
+// would throw an error on the circular reference
+// JSON.stringify( a );
+
+// define a custom JSON value serialization
+a.toJSON = function() {
+	// only include the `b` property for serialization
+	return { b: this.b };
+};
+
+JSON.stringify( a ); // "{"b":42}"
