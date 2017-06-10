@@ -65,3 +65,6 @@ Object.prototype.toString.call( a ); // "[object String]"
 
 //"type casting" (or "type conversion")
 //occur in statically typed languages at compile time, while "type coercion" is a runtime conversion for dynamically typed languages.
+
+//If you intend to JSON stringify an object that may contain illegal JSON value(s), or if you just have values in the object
+//that aren't appropriate for the serialization, you should define a toJSON() method for it that returns a JSON-safe version of the object.
