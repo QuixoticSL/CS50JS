@@ -105,3 +105,7 @@ d; // 3.14
 //while similar, have different purposes. Parse a string as a number when you don't know/care
 // what other non-numeric characters there may be on the right-hand side. Coerce a string (to a number)
 //when the only acceptable values are numeric and something like "42px" should be rejected as a number.
+
+var a = 3 * 6;
+var b = a;
+b;
