@@ -109,3 +109,12 @@ d; // 3.14
 var a = 3 * 6;
 var b = a;
 b;
+
+//Most common example of expression side effect
+
+function foo() {
+	a = a + 1;
+}
+
+var a = 1;
+foo();		// result: `undefined`, side effect: changed `a`
