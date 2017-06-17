@@ -121,3 +121,5 @@ foo();		// result: `undefined`, side effect: changed `a`
 
 //My take: use semicolons wherever you know they are "required,"
 // and limit your assumptions about ASI to a minimum.
+
+var a = /+foo/;		// Error!
