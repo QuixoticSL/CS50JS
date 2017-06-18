@@ -27,3 +27,15 @@ function later() {
 var answer = now();
 
 setTimeout( later, 1000 ); // Meaning of life: 42
+
+
+//Example of CONSOLE running in the background
+var a = {
+	index: 1
+};
+
+// later
+console.log( a ); // ??
+
+// even later
+a.index++;
