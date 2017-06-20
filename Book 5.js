@@ -62,3 +62,8 @@ while (true) {
 		}
 	}
 }
+
+function later() {
+	answer = answer * 2;
+	console.log( "Meaning of life:", answer );
+}
