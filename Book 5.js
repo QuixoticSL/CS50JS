@@ -85,3 +85,8 @@ function response(data) {
 // ajax(..) is some arbitrary Ajax function given by a library
 ajax( "http://some.url.1", response );
 ajax( "http://some.url.2", response );
+
+// swap `x` and `y` (via temp variable `z`)
+z = x;
+x = y;
+y = z;
