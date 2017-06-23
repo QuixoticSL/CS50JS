@@ -90,3 +90,7 @@ ajax( "http://some.url.2", response );
 z = x;
 x = y;
 y = z;
+
+var x, y = 2;
+
+console.log( x + y ); // NaN  <-- because `x` isn't set yet
