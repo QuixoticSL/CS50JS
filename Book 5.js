@@ -127,3 +127,18 @@ evt.on( "completion", function(){
 evt.on( "failure", function(err){
 	// oops, something went wrong in `foo(..)`
 } );
+
+//DUCK TYPING
+if (
+	p !== null &&
+	(
+		typeof p === "object" ||
+		typeof p === "function"
+	) &&
+	typeof p.then === "function"
+) {
+	// assume it's a thenable!
+}
+else {
+	// not a thenable
+}
