@@ -94,3 +94,17 @@ y = z;
 var x, y = 2;
 
 console.log( x + y ); // NaN  <-- because `x` isn't set yet
+
+foo(x) {
+	// start doing something that could take a while
+}
+
+foo( 42 )
+
+on (foo "completion") {
+	// now we can do the next step!
+}
+
+on (foo "error") {
+	// oops, something went wrong in `foo(..)`
+}
