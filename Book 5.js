@@ -164,3 +164,19 @@ var p1 = new Promise(function(resolve, reject) {
 });
 
 var p2 = Promise.resolve(42);
+
+
+//Example of CHAIN FLOW with PROMISES
+var p = Promise.resolve(21);
+
+var p2 = p.then(function(v) {
+    console.log(v); // 21
+
+    // fulfill `p2` with value `42`
+    return v * 2;
+});
+
+// chain off `p2`
+p2.then(function(v) {
+    console.log(v); // 42
+});
