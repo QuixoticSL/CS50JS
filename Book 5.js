@@ -180,3 +180,20 @@ var p2 = p.then(function(v) {
 p2.then(function(v) {
     console.log(v); // 42
 });
+
+
+// polyfill-safe guard check
+if (!Promise.first) {
+    Promise.first = function(prs) {
+        return new Promise(function(resolve, reject) {
+            // loop through all promises
+            prs.forEach(function(pr) {
+                // normalize the value
+                Promise.resolve(pr)
+                    // whichever one fulfills first wins, and
+                    // gets to resolve the main promise
+                    .then(resolve);
+            });
+        });
+    };
+}
