@@ -216,3 +216,10 @@ if (!Promise.map) {
         );
     };
 }
+
+//Examples of how THEN and CATCH work with PROMISES
+p.then(fulfilled);
+
+p.then(fulfilled, rejected);
+
+p.catch(rejected); // or `p.then( null, rejected )`
