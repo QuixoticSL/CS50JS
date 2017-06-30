@@ -247,3 +247,36 @@ it1.next(val2 / 2); // y:300
 // 20 300 3
 it2.next(val1 / 4); // y:10
 // 200 10 3
+
+
+//YIELDing a PROMISE and wiring that PROMISE to control
+//the GENERATOR'S ITERATOR
+
+var it = main();
+
+var p = it.next().value;
+
+// wait for the `p` promise to resolve
+p.then(
+    function(text) {
+        it.next(text);
+    },
+    function(err) {
+        it.throw(err);
+    }
+);
+
+function foo(x, y) {
+    return request(
+        "http://some.url.1/?x=" + x + "&y=" + y
+    );
+}
+
+function* main() {
+    try {
+        var text = yield foo(11, 31);
+        console.log(text);
+    } catch (err) {
+        console.error(err);
+    }
+}
