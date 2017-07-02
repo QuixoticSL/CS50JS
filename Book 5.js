@@ -353,3 +353,6 @@ function* foo() {
 
 // use previously defined `run(..)` utility
 run(foo);
+
+//Initializing a new Web Worker
+var w1 = new Worker("http://some.url.1/mycoolworker.js");
