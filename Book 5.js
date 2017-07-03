@@ -374,3 +374,22 @@ bench.hz; // number of operations per second
 bench.stats.moe; // margin of error
 bench.stats.variance; // variance across samples
 // ..
+
+//Showcasing a flaw with benchmark.js
+// Case 1
+var x = [];
+for (var i = 0; i < 10; i++) {
+    x[i] = "x";
+}
+
+// Case 2
+var x = [];
+for (var i = 0; i < 10; i++) {
+    x[x.length] = "x";
+}
+
+// Case 3
+var x = [];
+for (var i = 0; i < 10; i++) {
+    x.push("x");
+}
