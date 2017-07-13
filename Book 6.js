@@ -25,3 +25,9 @@ var a = 2;
 }
 
 console.log(a); // 2
+
+//Example of the SPREAD/REST operator
+var a = [2, 3, 4];
+var b = [1, ...a, 5];
+
+console.log(b);
