@@ -76,3 +76,11 @@ var tmp = foo(),
     c = tmp[2];
 
 console.log(a, b, c); // 1 2 3
+
+
+//Eliminating the need for the temporary variable.
+var [a, b, c] = foo();
+var { x: x, y: y, z: z } = bar();
+
+console.log(a, b, c); // 1 2 3
+console.log(x, y, z); // 4 5 6
