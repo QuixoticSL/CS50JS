@@ -34,6 +34,7 @@ var b = [1, ...a, 5];
 console.log(b);
 
 
+//Setting a default value for a function parameter
 function foo(x, y) {
     x = x || 11;
     y = y || 31;
