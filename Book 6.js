@@ -63,3 +63,16 @@ foo(5, null); // 5  <-- null coerces to `0`
 
 foo(undefined, 6); // 17 <-- `undefined` is missing
 foo(null, 6); // 6  <-- null coerces to `0`
+
+
+//Sample of destructing or structured assignment
+function foo() {
+    return [1, 2, 3];
+}
+
+var tmp = foo(),
+    a = tmp[0],
+    b = tmp[1],
+    c = tmp[2];
+
+console.log(a, b, c); // 1 2 3
