@@ -93,3 +93,14 @@ var x = 2,
         x,
         y
     };
+
+
+//Giving values in objects the value of function ES6 style
+var o = {
+    x() {
+        // ..
+    },
+    y() {
+        // ..
+    }
+}
