@@ -84,3 +84,12 @@ var { x: x, y: y, z: z } = bar();
 
 console.log(a, b, c); // 1 2 3
 console.log(x, y, z); // 4 5 6
+
+
+//Declaring object literals
+var x = 2,
+    y = 3,
+    o = {
+        x,
+        y
+    };
