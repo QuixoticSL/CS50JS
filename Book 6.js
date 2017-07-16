@@ -104,3 +104,12 @@ var o = {
         // ..
     }
 }
+
+
+//Templates in ES6
+var name = "Kyle";
+
+var greeting = `Hello ${name}!`;
+
+console.log(greeting); // "Hello Kyle!"
+console.log(typeof greeting); // "string"
