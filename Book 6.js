@@ -151,3 +151,13 @@ console.log( String.raw`Hello\nWorld` );
 
 String.raw`Hello\nWorld`.length;
 // 12
+
+
+//Comparing normal functions to arrow functions
+function foo(x,y) {
+	return x + y;
+}
+
+// versus
+
+var foo = (x,y) => x + y;
