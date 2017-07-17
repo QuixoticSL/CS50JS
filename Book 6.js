@@ -129,3 +129,15 @@ to all of you ${upper( `${who}s` )}!`;
 console.log( text );
 // A very WARM welcome
 // to all of you READERS!
+
+
+//Accessing .raw strings
+function showraw(strings, ...values) {
+	console.log( strings );
+	console.log( strings.raw );
+}
+
+showraw`Hello\nWorld`;
+// [ "Hello
+// World" ]
+// [ "Hello\nWorld" ]
