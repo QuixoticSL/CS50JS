@@ -161,3 +161,14 @@ function foo(x,y) {
 // versus
 
 var foo = (x,y) => x + y;
+
+
+//More versions of arrow functions
+var f1 = () => 12;
+var f2 = x => x * 2;
+var f3 = (x,y) => {
+	var z = x * 2 + y;
+	y++;
+	x *= 3;
+	return (x + y + z) / 2;
+};
