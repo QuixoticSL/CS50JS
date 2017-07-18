@@ -172,3 +172,8 @@ var f3 = (x,y) => {
 	x *= 3;
 	return (x + y + z) / 2;
 };
+
+//Iterator syntax
+/* Iterator [required]
+    next() {method}: retrieves next IteratorResult
+*/
