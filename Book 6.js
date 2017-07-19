@@ -189,3 +189,13 @@ it.next();		// { value: 2, done: false }
 it.next();		// { value: 3, done: false }
 
 it.next();		// { value: undefined, done: true }
+
+
+//Primitive string values are also iterables by default
+var greeting = "hello world";
+
+var it = greeting[Symbol.iterator]();
+
+it.next();		// { value: "h", done: false }
+it.next();		// { value: "e", done: false }
+...
