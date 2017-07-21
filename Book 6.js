@@ -199,3 +199,15 @@ var it = greeting[Symbol.iterator]();
 it.next();		// { value: "h", done: false }
 it.next();		// { value: "e", done: false }
 ...
+
+
+//How iterators with generators work.
+function *foo(x) {
+	if (x < 3) {
+		x = yield *foo( x + 1 );
+	}
+	return x * 2;
+}
+
+var it = foo( 1 );
+it.next();				// { value: 24, done: true }
