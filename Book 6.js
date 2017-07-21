@@ -211,3 +211,19 @@ function *foo(x) {
 
 var it = foo( 1 );
 it.next();				// { value: 24, done: true }
+
+
+//Creating a buffer
+var buf = new ArrayBuffer( 32 );
+buf.byteLength;
+//and layering a typedarray on top of the buffer
+var arr = new Uint16Array( buf );
+arr.length;							// 16
+
+
+//How to test endian
+var littleEndian = (function() {
+	var buffer = new ArrayBuffer( 2 );
+	new DataView( buffer ).setInt16( 0, 256, true );
+	return new Int16Array( buffer )[0] === 256;
+})();
