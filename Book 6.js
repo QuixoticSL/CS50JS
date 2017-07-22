@@ -271,3 +271,27 @@ s.size;							// 1
 
 s.clear();
 s.size;							// 0
+
+
+//Iterator methods are the same for SETS as for MAPS
+var s = new Set();
+
+var x = { id: 1 },
+	y = { id: 2 };
+
+s.add( x ).add( y );
+
+var keys = [ ...s.keys() ],
+	vals = [ ...s.values() ],
+	entries = [ ...s.entries() ];
+
+keys[0] === x;
+keys[1] === y;
+
+vals[0] === x;
+vals[1] === y;
+
+entries[0][0] === x;
+entries[0][1] === x;
+entries[1][0] === y;
+entries[1][1] === y;
