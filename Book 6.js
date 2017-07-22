@@ -295,3 +295,17 @@ entries[0][0] === x;
 entries[0][1] === x;
 entries[1][0] === y;
 entries[1][1] === y;
+
+
+//Array.of(..) examples
+var a = Array( 3 );
+a.length;						// 3
+a[0];							// undefined
+
+var b = Array.of( 3 );
+b.length;						// 1
+b[0];							// 3
+
+var c = Array.of( 1, 2, 3 );
+c.length;						// 3
+c;								// [1,2,3]
