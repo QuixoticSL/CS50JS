@@ -227,3 +227,47 @@ var littleEndian = (function() {
 	new DataView( buffer ).setInt16( 0, 256, true );
 	return new Int16Array( buffer )[0] === 256;
 })();
+
+
+//MAP syntax
+var m = new Map();
+
+var x = { id: 1 },
+	y = { id: 2 };
+
+m.set( x, "foo" );
+m.set( y, "bar" );
+
+m.get( x );						// "foo"
+m.get( y );
+
+
+//Syntax for WeakMaps
+var m = new WeakMap();
+
+var x = { id: 1 },
+	y = { id: 2 };
+
+m.set( x, "foo" );
+
+m.has( x );						// true
+m.has( y );						// false
+
+
+//Syntax for SETS
+var s = new Set();
+
+var x = { id: 1 },
+	y = { id: 2 };
+
+s.add( x );
+s.add( y );
+s.add( x );
+
+s.size;							// 2
+
+s.delete( y );
+s.size;							// 1
+
+s.clear();
+s.size;							// 0
