@@ -319,3 +319,23 @@ c;								// [1,2,3]
 [1,2,3,4,5].copyWithin( 0, -2 );		// [4,5,3,4,5]
 
 [1,2,3,4,5].copyWithin( 0, -2, -1 );	// [4,2,3,4,5]
+
+
+
+//Meta programming
+function daz() {
+	// ..
+}
+
+var obj = {
+	foo: function() {
+		// ..
+	},
+	bar: function baz() {
+		// ..
+	},
+	bam: daz,
+	zim() {
+		// ..
+	}
+};
