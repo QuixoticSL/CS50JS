@@ -339,3 +339,32 @@ var obj = {
 		// ..
 	}
 };
+
+
+//Async function syntax
+run( function *main() {
+	var ret = yield step1();
+
+	try {
+		ret = yield step2( ret );
+	}
+	catch (err) {
+		ret = yield step2Failed( err );
+	}
+
+	ret = yield Promise.all([
+		step3a( ret ),
+		step3b( ret ),
+		step3c( ret )
+	]);
+
+	yield step4( ret );
+} )
+.then(
+	function fulfilled(){
+		// `*main()` completed successfully
+	},
+	function rejected(reason){
+		// Oops, something went wrong
+	}
+);
